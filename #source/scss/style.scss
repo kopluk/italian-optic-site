@@ -1,0 +1,474 @@
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter Light BETA'), local('Inter-Light-BETA'),
+        url('../fonts/Inter-LightBETA.woff2') format('woff2'),
+        url('../fonts/Inter-LightBETA.woff') format('woff'),
+        url('../fonts/Inter-LightBETA.ttf') format('truetype'),
+        url('../fonts/Inter-LightBETA.eot');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter Regular'), local('Inter-Regular'),
+        url('../fonts/Inter-Regular.woff2') format('woff2'),
+        url('../fonts/Inter-Regular.woff') format('woff'),
+        url('../fonts/Inter-Regular.ttf') format('truetype'),
+        url('../fonts/Inter-Regular.eot');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter Medium'), local('Inter-Medium'),
+        url('../fonts/Inter-Medium.woff2') format('woff2'),
+        url('../fonts/Inter-Medium.woff') format('woff'),
+        url('../fonts/Inter-Medium.ttf') format('truetype'),
+        url('../fonts/Inter-Meduim.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter Semi Bold'), local('Inter-Semi-Bold'),
+        url('../fonts/Inter-SemiBold.woff2') format('woff2'),
+        url('../fonts/Inter-SemiBold.woff') format('woff'),
+        url('../fonts/Inter-SemiBold.ttf') format('truetype'),
+        url('../fonts/Inter-Semibold.eot');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: local('Inter Bold'), local('Inter-Bold'),
+        url('../fonts/Inter-Bold.woff2') format('woff2'),
+        url('../fonts/Inter-Bold.woff') format('woff'),
+        url('../fonts/Inter-Bold.ttf') format('truetype'),
+        url('../fonts/Inter-Bols.eot');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: local('Playfair Display Black'), local('Playfair-Display-Black'),
+        url('../fonts/PlayfairDisplay-Black.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Black.woff') format('woff'),
+        url('../fonts/PlayfairDisplay-Black.ttf') format('truetype'),
+        url('../fonts/PlayfairDisplay-Black.eot');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@import "nullstyle.scss";
+
+// Стилизация страницы
+
+// переменные 
+
+// шаблоны 
+.active-link {
+    color: #D36060;
+    border-bottom: 2px solid #D36060;
+}
+
+body {
+    background-color: #EFF1ED;
+}
+
+.container {
+    width: 1150px;
+    padding: 0 10px 0 10px;
+    margin: 0 auto;
+}
+
+.link-button {
+    padding: 16px 32px 16px 32px;
+    background-color: #505A5B;
+    font-family: "inter";
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.header {
+    text-align: center;
+    vertical-align: middle;
+    padding: 16px 0 16px 0;
+    margin: 0 0 85px 0;
+    background-color: #EFF1ED;
+
+    box-shadow: 0 3px 5px #e5e5e5;
+}
+
+.header-menu {
+    padding: 0;
+}
+
+.header-menu-item {
+    display: inline-block;
+    padding: 16px 0 16px 0;
+    margin: 0 62px 0 0;
+
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: left;
+    vertical-align: top;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    & a {
+        color: #505A5B;
+    }
+
+    &:first-child a {
+        @extend .active-link;
+    }
+
+    &:last-child a {
+        color: #E8EBE4;
+    }
+}
+
+.ottica {
+
+    .container {
+        position: relative;
+        padding: 253px 10px 320px 684px;
+
+        &::after {
+            content: '';
+            width: 1440px;
+            height: 1024px;
+            position: absolute;
+            background-image: url(../img/ottica-girl.png);
+            background-repeat: no-repeat;
+            left: -145px;
+            top: 0;
+            z-index: -1;
+        }
+    }
+
+    h1 {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 120px;
+        line-height: 156px;
+        letter-spacing: 0.02em;
+        color: #EFF1ED;
+        margin: 0 0 32px 0;
+        width: 507px;
+    }
+
+    p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 52px;
+        color: #EFF1ED;
+        width: 496px;
+    }
+}
+
+.text-preview {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #505A5B;
+
+    margin: 0 0 16px 0;
+}
+
+.text-h2 {
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 73px;
+    color: #505A5B;
+
+    margin: 0 0 32px 0;
+}
+
+.text-story {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    color: #333333;
+}
+
+.storia {
+    padding: 149px 0 70px 0;
+
+    .container {
+        position: relative;
+        padding: 0 0 0 654px;
+
+        &::after {
+            content: '';
+            width: 476px;
+            height: 739px;
+            position: absolute;
+            background-image: url(../img/storia.png);
+            background-repeat: no-repeat;
+            left: 0;
+            top: -70px;
+        }
+    }
+
+    .text-story {
+        width: 476px;
+    }
+}
+
+.merce {
+    padding: 144px 0 80px 0;
+    background-color: #505A5B;
+
+    .container {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 575px;
+            top: -64px;
+            background-image: url(../img/merce.png);
+            background-repeat: no-repeat;
+            width: 575px;
+            height: 553px;
+        }
+    }
+
+    .merce-text {
+        width: 476px;
+        margin: 0 0 184px 0;
+
+        .text-h2 {
+            color: #EFF1ED;
+        }
+
+        .text-preview,
+        .text-story {
+            color: #E8EBE4;
+        }
+    }
+}
+
+.relazioni {
+    width: 838px;
+    margin: 0 auto;
+
+    .relazioni-text {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 42px;
+        text-align: center;
+        color: #EFF1ED;
+        margin: 0 0 40px 0;
+    }
+
+    .marchi-item {
+        display: inline-block;
+        margin: 0 80px 0 0;
+        width: 178px;
+        height: 64px;
+        background-image: url(../img/marchies.png);
+        background-repeat: no-repeat;
+
+        &.marchi-rayban {
+            background-position: 0 0;
+            margin: 0 20px 0 0;
+        }
+
+        &.marchi-moscot {
+            background-position: -200px 0;
+            margin: 0 40px 0 0;
+        }
+
+        &.marchi-tomford {
+            background-position: -420px 0;
+            margin: 0 55px 0 0;
+        }
+
+        &.marchi-oliver {
+            background-position: -660px 0;
+            margin: 0;
+        }
+    }
+}
+
+.vista {
+    padding: 509px 0 129px 0;
+
+    .container {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: -389px;
+            background-image: url(../img/vista.png);
+            background-repeat: no-repeat;
+            width: 1170px;
+            height: 320px;
+        }
+    }
+
+    .vista-text {
+        width: 575px;
+        margin: 0 auto;
+
+        .text-story {
+            margin: 0 0 40px 0;
+        }
+
+        a {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: #E8EBE4;
+        }
+
+        .link-button {
+            display: inline-block;
+            color: #E8EBE4;
+        }
+    }
+}
+
+.footer {
+    padding: 80px 0 32px 0;
+    background-color: #505A5B;
+
+    .container {
+        padding: 0 0 0 100px;
+    }
+
+    nav,
+    .orari-data,
+    .Indicazioni-data,
+    .rights {
+        display: block;
+    }
+
+    nav {
+        width: 278px;
+        float: left;
+        margin: 0 119px 0 0;
+    }
+
+    .orari-data,
+    .Indicazioni-data {
+        float: left;
+        margin: 16px 0 0 0;
+        width: 277px;
+
+        p {
+            margin: 0 0 16px 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    .orari-data {
+        margin: 16px 21px 0 0;
+    }
+
+    .Indicazioni-data {
+        margin: 16px 0 117px 0;
+    }
+
+    .footer-link {
+        border-bottom: 1.5px solid #E8EBE4;
+    }
+}
+
+.footer-menu-item {
+    width: 278px;
+    margin: 0 119px 16px 0;
+
+    & a {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: #E8EBE4;
+    }
+
+    &:first-child a {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        color: #E8EBE4;
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.data-promo {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    color: #E8EBE4;
+}
+
+.data-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #E8EBE4;
+
+    a {
+        color: #E8EBE4;
+    }
+}
+
+.rights {
+    margin: 0 0 0 -100px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #E8EBE4;
+    clear: both;
+
+    a {
+        color: #E8EBE4;
+    }
+}
